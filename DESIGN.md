@@ -216,9 +216,9 @@ A client-pinned palette shared with transportesnazar.cl: navy and slate for grou
 - **WhatsApp Green** (wa): third-party brand colour, restricted to WhatsApp affordances (icon in the outline button, its hover ring, the floating button, the mobile dock half).
 
 ### Neutral
-- **Dispatch Navy** (night): page ground, hero, services, coverage edge, close. Ink (ink) shares the same value as text on light grounds and as the photo-reel ground.
-- **Slate Raised** (night-2): service card body, progress bar track, scrollbar thumb.
-- **Indigo Night** (night-3): centre of the coverage radial glow.
+- **Page ground is white, as on transportesnazar.cl** (oct. 2026, client request): body, hero (photo washed with white), services, gallery, footer on Paper White; ticker, coverage, people and close on Mist Grey. Indigo (water-deep) stays as the only coloured band (figures, incendios). Navy no longer grounds any section.
+- **Dispatch Navy** (night) / Ink (ink): headings and strong text on light grounds; the split-flap board keeps its dark tiles as an object on white.
+- **Slate Raised** (night-2), **Indigo Night** (night-3): kept as tokens, unused as grounds.
 - **Flap Tile / Tile Highlight / Hinge** (tile, tile-hi, hinge): the three values that build a split-flap tile; tile-hi is the upper leaf, hinge the 1px seam, tile the lower leaf. Tile alone is the region key ground and service media placeholder.
 - **Paper White** (steel) and **Mist Grey** (steel-2): light reading grounds (company and Giro Limpio on white, people on grey).
 - **Border Grey** (steel-3): Misión/Visión rule and dashed photo-slot borders.
