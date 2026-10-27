@@ -20,17 +20,17 @@ Sitio estático: HTML + CSS + JS, sin generador. Los textos se editan directo en
 
 ## Publicar cambios
 
-Cloudflare está conectado al repositorio de GitHub: cada push a `main` publica solo (~1 min).
+```
+npx wrangler deploy
+```
 
-```
-git add -A
-git commit -m "Describe el cambio"
-git push
-```
+(Corre `node _generador/publicar.js` y sube `dist/`. Cuenta Cloudflare: admquinchosyterraza@gmail.com.)
+El código también tiene respaldo en GitHub (privado): github.com/admquinchosyterraza-wq/aljibe
+(`git add -A && git commit -m "..." && git push`). GitHub NO está conectado a Cloudflare: subir a GitHub no publica.
 
 ## Estado actual: BORRADOR en .workers.dev
 
-- Publicado en la dirección de prueba `.workers.dev` para que el cliente lo revise.
+- Borrador en vivo: https://aljibe.admquinchosyterraza.workers.dev
 - `_headers` lleva `X-Robots-Tag: noindex, nofollow` para que Google no lo indexe todavía.
 - aljibe.cl sigue mostrando el sitio antiguo (WordPress).
 
