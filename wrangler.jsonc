@@ -1,0 +1,19 @@
+// Cloudflare (Worker con archivos estáticos). "npx wrangler deploy" corre
+// build.command (arma dist/) y publica SOLO dist/.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Debe coincidir con el nombre del proyecto en el panel de Cloudflare
+  "name": "aljibe",
+  "compatibility_date": "2026-10-20",
+  "build": {
+    "command": "node _generador/publicar.js"
+  },
+  "assets": {
+    "directory": "./dist",
+    // Las páginas que no existen muestran nuestro 404.html
+    "not_found_handling": "404-page"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

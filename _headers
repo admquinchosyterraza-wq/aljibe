@@ -1,0 +1,18 @@
+# Aljibe — cabeceras de seguridad y caché (Cloudflare)
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  # BORRADOR: que Google no lo indexe mientras el cliente lo revisa en .workers.dev.
+  # Quitar esta línea al conectar aljibe.cl.
+  X-Robots-Tag: noindex, nofollow
+
+/img/*
+  Cache-Control: public, max-age=604800
+/css/*
+  Cache-Control: public, max-age=3600
+/js/*
+  Cache-Control: public, max-age=3600

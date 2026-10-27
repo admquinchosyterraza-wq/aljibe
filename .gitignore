@@ -1,0 +1,17 @@
+# Carpeta que arma _generador/publicar.js (Cloudflare la genera sola)
+dist/
+
+# Configuración local de la vista previa de Claude
+.claude/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Archivos temporales de Wrangler (Cloudflare)
+.wrangler/
+node_modules/
+
+# Capturas de revisión de diseño (pesadas, se regeneran)
+.impeccable/review/

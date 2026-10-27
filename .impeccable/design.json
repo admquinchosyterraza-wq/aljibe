@@ -1,0 +1,632 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T20:23:51.883788+00:00",
+  "title": "Design System: Aljibe",
+  "extensions": {
+    "colorMeta": {
+      "night": {
+        "role": "neutral",
+        "displayName": "Dispatch Navy",
+        "canonical": "oklch(20.8% 0.040 266)",
+        "tonalRamp": [
+          "#070b16",
+          "#1e2533",
+          "#3a4254",
+          "#576176",
+          "#77829b",
+          "#9aa5bc",
+          "#bfc9df",
+          "#e5efff"
+        ]
+      },
+      "night-2": {
+        "role": "neutral",
+        "displayName": "Slate Raised",
+        "canonical": "oklch(27.9% 0.037 260)",
+        "tonalRamp": [
+          "#060b15",
+          "#1e2532",
+          "#394252",
+          "#566275",
+          "#768399",
+          "#99a6ba",
+          "#becadd",
+          "#e5efff"
+        ]
+      },
+      "night-3": {
+        "role": "neutral",
+        "displayName": "Indigo Night",
+        "canonical": "oklch(29.8% 0.074 270)",
+        "tonalRamp": [
+          "#05091e",
+          "#1b233f",
+          "#354062",
+          "#525f88",
+          "#7180af",
+          "#95a4d0",
+          "#bac8f1",
+          "#e0eeff"
+        ]
+      },
+      "tile": {
+        "role": "neutral",
+        "displayName": "Flap Tile",
+        "canonical": "oklch(23.1% 0.047 267)",
+        "tonalRamp": [
+          "#060b17",
+          "#1e2536",
+          "#394257",
+          "#56617a",
+          "#76829f",
+          "#99a5c0",
+          "#bec9e2",
+          "#e4efff"
+        ]
+      },
+      "tile-hi": {
+        "role": "neutral",
+        "displayName": "Tile Highlight",
+        "canonical": "oklch(27.6% 0.053 265)",
+        "tonalRamp": [
+          "#050a19",
+          "#1c2538",
+          "#374259",
+          "#54617d",
+          "#7382a3",
+          "#97a5c4",
+          "#bcc9e6",
+          "#e2efff"
+        ]
+      },
+      "hinge": {
+        "role": "neutral",
+        "displayName": "Hinge",
+        "canonical": "oklch(15.3% 0.029 269)",
+        "tonalRamp": [
+          "#080b13",
+          "#21252f",
+          "#3d424f",
+          "#5b6171",
+          "#7b8294",
+          "#9ea5b6",
+          "#c3c9d9",
+          "#e9eefd"
+        ]
+      },
+      "water": {
+        "role": "primary",
+        "displayName": "Dispatch Sky",
+        "canonical": "oklch(74.1% 0.150 240)",
+        "tonalRamp": [
+          "#000a2d",
+          "#002753",
+          "#00477b",
+          "#0068a6",
+          "#008bd1",
+          "#45aff0",
+          "#7ad4ff",
+          "#abf9ff"
+        ]
+      },
+      "water-hi": {
+        "role": "primary",
+        "displayName": "Radar Ice",
+        "canonical": "oklch(84.0% 0.092 237)",
+        "tonalRamp": [
+          "#000d20",
+          "#002941",
+          "#0e4765",
+          "#2a688b",
+          "#478ab2",
+          "#71add2",
+          "#9bd1f4",
+          "#c6f6ff"
+        ]
+      },
+      "water-deep": {
+        "role": "secondary",
+        "displayName": "Nazar Indigo",
+        "canonical": "oklch(38.5% 0.237 273)",
+        "tonalRamp": [
+          "#0a0048",
+          "#160075",
+          "#2927a6",
+          "#4048d8",
+          "#5a6aff",
+          "#7c94ff",
+          "#a1bdff",
+          "#c9e6ff"
+        ]
+      },
+      "beacon": {
+        "role": "primary",
+        "displayName": "Dispatch Sky (beacon alias)",
+        "canonical": "oklch(74.1% 0.150 240)",
+        "tonalRamp": [
+          "#000a2d",
+          "#002753",
+          "#00477b",
+          "#0068a6",
+          "#008bd1",
+          "#45aff0",
+          "#7ad4ff",
+          "#abf9ff"
+        ]
+      },
+      "beacon-hi": {
+        "role": "primary",
+        "displayName": "Sky Bright",
+        "canonical": "oklch(79.7% 0.118 237)",
+        "tonalRamp": [
+          "#000c25",
+          "#002948",
+          "#00486e",
+          "#016996",
+          "#2a8cbf",
+          "#5eafdf",
+          "#8cd3ff",
+          "#b9f8ff"
+        ]
+      },
+      "on-beacon": {
+        "role": "primary",
+        "displayName": "On-Sky Navy",
+        "canonical": "oklch(20.8% 0.040 266)",
+        "tonalRamp": [
+          "#070b16",
+          "#1e2533",
+          "#3a4254",
+          "#576176",
+          "#77829b",
+          "#9aa5bc",
+          "#bfc9df",
+          "#e5efff"
+        ]
+      },
+      "lav": {
+        "role": "tertiary",
+        "displayName": "Soft Lavender",
+        "canonical": "oklch(93.0% 0.037 292)",
+        "tonalRamp": [
+          "#0b0914",
+          "#252331",
+          "#423f51",
+          "#615e73",
+          "#827f97",
+          "#a5a2b8",
+          "#c9c6db",
+          "#eeecff"
+        ]
+      },
+      "wa": {
+        "role": "tertiary",
+        "displayName": "WhatsApp Green",
+        "canonical": "oklch(76.1% 0.201 150)",
+        "tonalRamp": [
+          "#001600",
+          "#003500",
+          "#005700",
+          "#007b18",
+          "#00a135",
+          "#33c363",
+          "#72e68f",
+          "#a6ffbb"
+        ]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "steel-2": {
+        "role": "neutral",
+        "displayName": "Mist Grey",
+        "canonical": "oklch(95.8% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "steel-3": {
+        "role": "neutral",
+        "displayName": "Border Grey",
+        "canonical": "oklch(82.6% 0.010 293)",
+        "tonalRamp": [
+          "#0b0a0f",
+          "#252429",
+          "#424147",
+          "#616066",
+          "#828188",
+          "#a5a4ab",
+          "#c9c8cf",
+          "#eeedf5"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink Navy",
+        "canonical": "oklch(20.8% 0.040 266)",
+        "tonalRamp": [
+          "#070b16",
+          "#1e2533",
+          "#3a4254",
+          "#576176",
+          "#77829b",
+          "#9aa5bc",
+          "#bfc9df",
+          "#e5efff"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Body Grey",
+        "canonical": "oklch(46.2% 0.012 253)",
+        "tonalRamp": [
+          "#080b10",
+          "#21252b",
+          "#3e4248",
+          "#5d6268",
+          "#7e8389",
+          "#a0a6ac",
+          "#c4cad1",
+          "#e9eff6"
+        ]
+      },
+      "paper-text": {
+        "role": "neutral",
+        "displayName": "Slate Mist",
+        "canonical": "oklch(86.9% 0.020 253)",
+        "tonalRamp": [
+          "#060c13",
+          "#1e262f",
+          "#3b434d",
+          "#59626d",
+          "#7a838e",
+          "#9da6b2",
+          "#c0cad6",
+          "#e5f0fc"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Signal White",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; one line lit in sky blue."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings, sentence case, tight tracking."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service card titles."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Misión/Visión (indigo) and people role titles."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Figures band numbers on indigo; tabular."
+      },
+      "board": {
+        "displayName": "Board",
+        "purpose": "Split-flap tiles; uppercase data only."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraph copy; tabular figures."
+      },
+      "lead": {
+        "displayName": "Lead (Inter)",
+        "purpose": "Hero, coverage and wildfire lead paragraphs."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav and footer nav."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Button main line; Inter 500 .82rem sub-line beneath."
+      }
+    },
+    "shadows": [
+      {
+        "name": "board-float",
+        "value": "0 30px 60px rgb(0 0 0 / .45), inset 0 1px 0 rgb(255 255 255 / .06)",
+        "purpose": "Hero departure board."
+      },
+      {
+        "name": "card-float",
+        "value": "0 18px 40px rgb(0 0 0 / .35)",
+        "purpose": "Service cards and wildfire photos."
+      },
+      {
+        "name": "phoneboard-float",
+        "value": "0 24px 50px rgb(0 0 0 / .4)",
+        "purpose": "Closing phone-number board."
+      },
+      {
+        "name": "button-lift",
+        "value": "0 10px 24px rgb(0 0 0 / .35)",
+        "purpose": "Call buttons at rest; hover 0 14px 30px rgb(0 0 0 / .45)."
+      },
+      {
+        "name": "light-ground-float",
+        "value": "0 30px 60px rgb(15 23 42 / .22)",
+        "purpose": "Images on white grounds."
+      },
+      {
+        "name": "topbar-solid",
+        "value": "0 8px 24px rgb(0 0 0 / .35)",
+        "purpose": "Scrolled topbar, with backdrop-filter: blur(10px)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "All state transitions and entrances."
+      },
+      {
+        "name": "flap-step",
+        "value": "55ms per flip step, 22ms per-character stagger, 110ms per-cell board stagger, 90ms rotateX flip",
+        "purpose": "Split-flap character flip."
+      },
+      {
+        "name": "board-cycle",
+        "value": "2200ms interval after 3200ms delay",
+        "purpose": "Equipos column cycles one row at a time."
+      },
+      {
+        "name": "carousel-auto",
+        "value": "4500ms advance; 8000ms idle after direct input; 35% in-view threshold",
+        "purpose": "Services carousel auto-advance; paused on hover, focus, hidden tab; off under reduced motion."
+      },
+      {
+        "name": "carousel-card",
+        "value": "600ms opacity .55 to 1; 1200ms photo scale 1.08 to 1; 600ms progress bar",
+        "purpose": "Current service card emphasis."
+      },
+      {
+        "name": "radar-cycle",
+        "value": "3200ms",
+        "purpose": "Region auto-cycle while radar is in view, until the user picks one."
+      },
+      {
+        "name": "hero-line-in",
+        "value": "900ms clip-path reveal, 120ms stagger",
+        "purpose": "Hero headline lines."
+      },
+      {
+        "name": "reveal",
+        "value": "800ms opacity + 28px rise, 90ms sibling stagger",
+        "purpose": "Section reveals on scroll."
+      },
+      {
+        "name": "radar-sweep",
+        "value": "6s linear infinite",
+        "purpose": "Coverage radar sweep; hidden under reduced motion."
+      },
+      {
+        "name": "marquee",
+        "value": "38s ticker; 60s/70s reel rows",
+        "purpose": "Equipment ticker and photo reel; stopped under reduced motion."
+      },
+      {
+        "name": "beacon-pulse",
+        "value": "1.6s ring pulse",
+        "purpose": "Live dot on the dispatch call."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "640px"
+      },
+      {
+        "name": "tablet",
+        "value": "960px"
+      },
+      {
+        "name": "desktop-narrow",
+        "value": "1100px"
+      }
+    ],
+    "brandAlignment": {
+      "source": "https://www.transportesnazar.cl/",
+      "status": "client-pinned",
+      "scope": "palette and typography (Montserrat + Inter)",
+      "note": "Changing these is a client decision, not a design refinement."
+    }
+  },
+  "components": [
+    {
+      "name": "Call Button",
+      "kind": "button",
+      "refersTo": "button-call",
+      "description": "Primary live action: phone call. Sky ground, navy text.",
+      "html": "<a class=\"ds-btn ds-btn-call\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Llamar ahora<small>+56 9 8508 3990</small></span></a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:14px;padding:14px 24px 14px 18px;border-radius:10px;min-height:64px;font-family:Montserrat,system-ui,sans-serif;font-weight:700;font-size:1.05rem;line-height:1;text-decoration:none;border:0;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s,background-color .2s}.ds-btn span{display:flex;flex-direction:column;gap:5px}.ds-btn small{font:500 .82rem/1 Inter,system-ui,sans-serif;opacity:.85}.ds-btn:hover{transform:translateY(-2px)}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid #38b6ff;outline-offset:3px}.ds-btn-call{background:#38b6ff;color:#0f172a;box-shadow:0 10px 24px rgb(0 0 0 / .35)}.ds-btn-call:hover{background:#6cc8ff;box-shadow:0 14px 30px rgb(0 0 0 / .45)}"
+    },
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "Outline companion to the call button on navy; green icon only.",
+      "html": "<div style=\"background:#0f172a;padding:20px\"><a class=\"ds-btn ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M8.5 8.5c0 4 3 7 7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg><span>WhatsApp<small>Escríbenos ahora</small></span></a></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:14px;padding:14px 24px 14px 18px;border-radius:10px;min-height:64px;font-family:Montserrat,system-ui,sans-serif;font-weight:700;font-size:1.05rem;line-height:1;text-decoration:none;border:0;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s,background-color .2s}.ds-btn span{display:flex;flex-direction:column;gap:5px}.ds-btn small{font:500 .82rem/1 Inter,system-ui,sans-serif;opacity:.85}.ds-btn:hover{transform:translateY(-2px)}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid #38b6ff;outline-offset:3px}.ds-btn-wa{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgb(255 255 255 / .55)}.ds-btn-wa svg{color:#25d366}.ds-btn-wa:hover{background:rgb(37 211 102 / .12);box-shadow:inset 0 0 0 1px #25d366}"
+    },
+    {
+      "name": "Light Call Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Call button on the indigo wildfire band.",
+      "html": "<div style=\"background:#2b0ebe;padding:20px\"><a class=\"ds-btn ds-btn-light\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Emergencia: llamar ahora<small>+56 9 8508 3990</small></span></a></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:14px;padding:14px 24px 14px 18px;border-radius:10px;min-height:64px;font-family:Montserrat,system-ui,sans-serif;font-weight:700;font-size:1.05rem;line-height:1;text-decoration:none;border:0;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s,background-color .2s}.ds-btn span{display:flex;flex-direction:column;gap:5px}.ds-btn small{font:500 .82rem/1 Inter,system-ui,sans-serif;opacity:.85}.ds-btn:hover{transform:translateY(-2px)}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid #38b6ff;outline-offset:3px}.ds-btn-light{background:#fff;color:#0f172a;box-shadow:0 10px 26px rgb(0 0 0 / .3)}.ds-btn-light svg{color:#2b0ebe}.ds-btn-light:hover{background:#e8e4ff}"
+    },
+    {
+      "name": "Split-flap Board",
+      "kind": "custom",
+      "refersTo": "flap-tile",
+      "description": "Signature data unit: hinge-seamed tiles, uppercase Montserrat; lit = sky, incendios = lavender.",
+      "html": "<div class=\"ds-board\"><div class=\"ds-board-head\"><span>Servicio</span><span>Estado</span></div><div class=\"ds-row\"><span class=\"ds-flap\">Agua potable</span><span class=\"ds-flap ds-lit\">Disponible 24/7</span></div><div class=\"ds-row\"><span class=\"ds-flap\">Incendios</span><span class=\"ds-flap ds-fire\">Respuesta rápida</span></div></div>",
+      "css": ".ds-board{background:linear-gradient(180deg,#17213a,#111a30);border-radius:14px;padding:14px 18px 16px;box-shadow:0 30px 60px rgb(0 0 0 / .45),inset 0 1px 0 rgb(255 255 255 / .06);display:grid;gap:6px}.ds-board-head,.ds-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ds-board-head{padding:2px 4px 10px;font-family:Montserrat,system-ui,sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#38b6ff;border-bottom:1px solid rgb(56 182 255 / .2);margin-bottom:2px}.ds-flap{display:block;background:linear-gradient(180deg,#1b2742 0 calc(50% - .5px),#070b18 calc(50% - .5px) calc(50% + .5px),#131c33 calc(50% + .5px));border-radius:6px;padding:11px 12px;font-family:Montserrat,system-ui,sans-serif;font-weight:700;font-size:1.05rem;line-height:1;letter-spacing:.03em;text-transform:uppercase;color:#f1f5f9;white-space:nowrap;overflow:hidden}.ds-lit{color:#38b6ff}.ds-fire{color:#e8e4ff}"
+    },
+    {
+      "name": "Services Carousel Controls",
+      "kind": "custom",
+      "refersTo": "carousel-arrow",
+      "description": "Flap counter, progress bar and circular prev/next arrows heading the auto-advancing carousel.",
+      "html": "<div class=\"ds-prog\"><span><b class=\"ds-count\">2</b>/4</span><span class=\"ds-bar\"><i></i></span><span class=\"ds-arrows\"><button class=\"ds-arrow ds-prev\" aria-label=\"Anterior\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><button class=\"ds-arrow\" aria-label=\"Siguiente\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button></span></div>",
+      "css": ".ds-prog{display:flex;align-items:center;gap:16px;background:#0f172a;padding:20px;font-family:Montserrat,system-ui,sans-serif;font-weight:700;font-size:1.2rem;color:#cbd5e1}.ds-count{display:inline-flex;background:linear-gradient(180deg,#1b2742 0 calc(50% - .5px),#070b18 calc(50% - .5px) calc(50% + .5px),#131c33 calc(50% + .5px));border-radius:6px;padding:5px 9px;margin-right:3px;color:#38b6ff}.ds-bar{width:140px;height:4px;border-radius:2px;background:#1e293b;overflow:hidden}.ds-bar i{display:block;height:100%;width:50%;background:#38b6ff}.ds-arrows{display:flex;gap:8px}.ds-arrow{width:48px;height:48px;border-radius:50%;border:1px solid rgb(255 255 255 / .3);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:background-color .2s,border-color .2s}.ds-arrow:hover{background:#2b0ebe;border-color:#2b0ebe}.ds-arrow:focus-visible{outline:3px solid #38b6ff;outline-offset:3px}.ds-prev svg{transform:scaleX(-1)}"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Current carousel card: slate body, 16px corners, title, copy, chips and sky CTA link.",
+      "html": "<article class=\"ds-svc\"><h3>Distribución de agua potable</h3><p>Aljibes de 1.000 a 40.000 litros con certificación DS41.</p><ul class=\"ds-chips\"><li>Aljibe 40.000 L</li><li>DS41 Minsal</li></ul><a class=\"ds-cta\" href=\"#\">Pedir agua potable <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></article>",
+      "css": ".ds-svc{background:#1e293b;color:#fff;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:18px;box-shadow:0 18px 40px rgb(0 0 0 / .35);max-width:520px;font-family:Montserrat,system-ui,sans-serif;}.ds-svc h3{margin:0;font-weight:800;font-size:2rem;line-height:1.15;letter-spacing:-.02em}.ds-svc p{margin:0;color:#cbd5e1;line-height:1.65}.ds-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}.ds-chips li{background:linear-gradient(180deg,#1b2742 0 calc(50% - .5px),#070b18 calc(50% - .5px) calc(50% + .5px),#131c33 calc(50% + .5px));border-radius:6px;padding:11px 12px;font-weight:600;font-size:.8rem;line-height:1;letter-spacing:.05em;text-transform:uppercase}.ds-cta{display:inline-flex;align-items:center;gap:10px;color:#38b6ff;font-weight:700;text-decoration:none;padding:12px 0}.ds-cta svg{transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-cta:hover svg{transform:translateX(6px)}"
+    },
+    {
+      "name": "Topbar Dispatch Call",
+      "kind": "button",
+      "refersTo": "dispatch-call",
+      "description": "Always-visible sky call button with a pulsing live dot.",
+      "html": "<a class=\"ds-dispatch\" href=\"#\"><span class=\"ds-dot\"></span><span class=\"ds-dtxt\"><small>Despacho 24/7</small><strong>+56 9 8508 3990</strong></span></a>",
+      "css": ".ds-dispatch{display:inline-flex;align-items:center;gap:12px;text-decoration:none;background:#38b6ff;color:#0f172a;padding:9px 18px 9px 14px;border-radius:10px;box-shadow:0 6px 16px rgb(0 0 0 / .35);transition:transform .2s,background-color .2s;font-family:Montserrat,system-ui,sans-serif;}.ds-dispatch:hover{transform:translateY(-1px);background:#6cc8ff}.ds-dispatch:focus-visible{outline:3px solid #38b6ff;outline-offset:3px}.ds-dot{width:11px;height:11px;border-radius:50%;background:#e0261b}.ds-dtxt{display:flex;flex-direction:column;line-height:1}.ds-dtxt small{font-weight:700;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;opacity:.8}.ds-dtxt strong{font-weight:800;font-size:1.12rem;margin-top:4px}"
+    },
+    {
+      "name": "Region Keys",
+      "kind": "chip",
+      "refersTo": "region-key",
+      "description": "Coverage region tabs; selected lights sky.",
+      "html": "<div class=\"ds-regions\" role=\"tablist\"><button class=\"ds-key\" role=\"tab\" aria-selected=\"true\">Ñuble</button><button class=\"ds-key\" role=\"tab\" aria-selected=\"false\">Biobío</button><button class=\"ds-key\" role=\"tab\" aria-selected=\"false\">Maule</button></div>",
+      "css": ".ds-regions{display:flex;flex-wrap:wrap;gap:8px;background:#0f172a;padding:20px}.ds-key{font-family:Montserrat,system-ui,sans-serif;font-weight:700;font-size:.9rem;line-height:1;text-transform:uppercase;letter-spacing:.04em;color:#cbd5e1;background:#131c33;border:0;border-radius:8px;padding:14px 16px;cursor:pointer;transition:background-color .2s,color .2s}.ds-key:hover{color:#fff;background:#1b2742}.ds-key[aria-selected=\"true\"]{color:#0f172a;background:#38b6ff}.ds-key:focus-visible{outline:3px solid #38b6ff;outline-offset:3px}"
+    },
+    {
+      "name": "Primary Nav",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Topbar links with sky underline on hover/active.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"is-active\">Servicios</a><a href=\"#\">Incendios</a><a href=\"#\">Cobertura</a><a href=\"#\">Empresa</a></nav>",
+      "css": ".ds-nav{display:flex;gap:28px;background:#0f172a;padding:20px;font-family:Montserrat,system-ui,sans-serif;font-weight:600;font-size:.95rem;line-height:1}.ds-nav a{text-decoration:none;color:#cbd5e1;padding:8px 0;position:relative;transition:color .2s}.ds-nav a::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:2px;background:#38b6ff;transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-nav a:hover,.ds-nav a.is-active{color:#fff}.ds-nav a:hover::after,.ds-nav a.is-active::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:3px solid #38b6ff;outline-offset:3px}"
+    },
+    {
+      "name": "Value Tags",
+      "kind": "chip",
+      "refersTo": "value-tag",
+      "description": "Company values on white: lavender tags, navy text.",
+      "html": "<ul class=\"ds-values\"><li>Responsabilidad</li><li>Compromiso</li><li>Seguridad</li></ul>",
+      "css": ".ds-values{list-style:none;margin:0;padding:20px;background:#fff;display:flex;flex-wrap:wrap;gap:8px}.ds-values li{font-family:Montserrat,system-ui,sans-serif;font-weight:600;font-size:.85rem;line-height:1;background:#e8e4ff;color:#0f172a;padding:11px 14px;border-radius:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Central de despacho 24/7",
+    "overview": "The site is Aljibe's dispatch room, not a brochure. The ground is a deep slate navy; the light on it is a clear sky blue that means \"this line is live, act now\", and a saturated indigo carries the brand bands (figures, wildfire response, mission headings). Information still arrives the way a departure board delivers it: caps on dark split-flap tiles with a hinge seam through the middle, characters flipping into place. Every measurement (litres, years, regions, the service counter) is set in tabular figures.\n\n**Brand commitment (client-pinned).** The palette and typography are a deliberate alignment with the sister brand at transportesnazar.cl, requested by the client: navy #0F172A, slate #1E293B, indigo #2B0EBE, sky #38B6FF, lavender #E8E4FF, white/#F1F1F1 light grounds, #C6C5CC borders, #54595F body text on light, set in Montserrat with Inter for secondary copy. Future work keeps these colours and families; changing them is a client decision, not a design refinement.\n\nDensity is bold and direct: hierarchy comes from scale contrast between large, tightly tracked Montserrat 800 headings in sentence case and small uppercase board labels, with no eyebrow labels above headings. Reading sections switch to white and light-grey grounds so long copy rests, then the page returns to navy for coverage and the closing phone board. Motion is functional theatre: the board flips in on load, the services carousel advances on its own while in view, a radar sweep circles the coverage rings, and the call path stays visible at every scroll position on every device. Nothing hijacks the page scroll.",
+    "keyCharacteristics": [
+      "Navy ground with sky blue as the single live/act signal and indigo as the brand band colour.",
+      "Split-flap tiles (dark tile, 1px hinge seam, uppercase Montserrat) as the recurring information unit.",
+      "Montserrat 800 sentence-case headings with tight negative tracking; Inter for leads and secondary lines.",
+      "White and light-grey grounds for reading sections, flat and untextured.",
+      "Services as a self-advancing scroll-snap carousel, never scroll-jacked.",
+      "Call and WhatsApp always reachable: topbar dispatch button, floating WhatsApp on desktop, fixed dock on phones."
+    ],
+    "rules": [
+      {
+        "name": "The Brand Lock Rule",
+        "body": "This palette is a client-pinned alignment with transportesnazar.cl. Do not introduce new hues, swap the indigo or sky for near-matches, or reintroduce the former amber; extend only with tints of the listed values.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sky Signal Rule",
+        "body": "Sky blue means live or act: a call, 24/7 availability, a selected/lit state, the current position. Never use it as a section tint or illustration fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lit-Equals-Available Rule",
+        "body": "State is shown as illumination: a tile, key or zone turns sky blue when it is on/selected, and the others dim (opacity .45) when one is isolated.",
+        "section": "colors"
+      },
+      {
+        "name": "The Borrowed Green Rule",
+        "body": "WhatsApp green appears only where WhatsApp is the action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "`font-variant-numeric: tabular-nums` is set on body; litres, years, phone numbers and counters must line up like a board.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence-Case Heading Rule",
+        "body": "Headings are sentence case Montserrat 800 with negative tracking; uppercase is reserved for data on tiles and keys.",
+        "section": "typography"
+      },
+      {
+        "name": "The Scale-Not-Kicker Rule",
+        "body": "Hierarchy comes from scale contrast between heavy headings and small labels. Headings stand alone; there are no eyebrow/kicker lines above them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lift-On-Act Rule",
+        "body": "Buttons rise 1–2px on hover and settle with a 0.98 scale on press; elsewhere hover only shifts colour or nudges an arrow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the transportesnazar.cl palette and Montserrat/Inter pairing exactly as pinned; they are a client brand commitment.",
+      "**Do** keep sky blue (water) for live/act only: calls, 24/7, selected/lit state, current position.",
+      "**Do** use indigo (water-deep) for brand bands and mission headings, with white and lavender text on it.",
+      "**Do** set data (services, equipment, statuses, phone numbers, counters) on split-flap tiles in uppercase Montserrat 700 with the hinge seam.",
+      "**Do** set headings in Montserrat 800 sentence case with -0.02 to -0.025em tracking.",
+      "**Do** keep a call and a WhatsApp action reachable at every scroll position, with 54–64px targets.",
+      "**Do** switch to white or #F1F1F1 grounds with navy headings and #54595F body text for long reading sections, and return to navy for signals and contact.",
+      "**Do** give every motion a reduced-motion fallback: flaps render final text, marquees stop, the radar sweep hides, the carousel stops auto-advancing, reveals show immediately."
+    ],
+    "donts": [
+      "**Don't** reintroduce amber, Big Shoulders or Barlow; they belong to the retired system.",
+      "**Don't** pin a section and drive horizontal movement from the vertical scroll wheel; the services carousel advances on its own and by direct input only.",
+      "**Don't** build a white hero with a row of equal cards.",
+      "**Don't** use sky blue as a decorative tint, illustration fill or section accent without a live/act meaning.",
+      "**Don't** add eyebrow/kicker labels above headings; hierarchy comes from scale.",
+      "**Don't** set headings in all caps; uppercase is for board data.",
+      "**Don't** use hard offset shadows; depth is soft ambient float and tonal layering.",
+      "**Don't** use WhatsApp green anywhere except WhatsApp actions.",
+      "**Don't** let motion delay or cover the contact path."
+    ]
+  }
+}
