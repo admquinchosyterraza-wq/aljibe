@@ -25,59 +25,59 @@ colors:
   white: "#ffffff"
 typography:
   display:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "clamp(2.5rem, 4.9vw, 4.9rem)"
     fontWeight: 800
     lineHeight: 1.04
     letterSpacing: "-0.025em"
   headline:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "clamp(2rem, 3.8vw, 3.4rem)"
     fontWeight: 800
     lineHeight: 1.08
     letterSpacing: "-0.025em"
   title:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "clamp(1.5rem, 2.4vw, 2.2rem)"
     fontWeight: 800
     lineHeight: 1.15
     letterSpacing: "-0.02em"
   subtitle:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "1.3rem"
     fontWeight: 700
     lineHeight: 1.2
   figure:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "clamp(2.2rem, 4vw, 3.6rem)"
     fontWeight: 700
     lineHeight: 1
     letterSpacing: "-0.02em"
     fontFeature: "\"tnum\" 1"
   board:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "clamp(.85rem, 1.2vw, 1.12rem)"
     fontWeight: 700
     lineHeight: 1
     letterSpacing: "0.03em"
   body:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.65
     fontFeature: "\"tnum\" 1"
   lead:
-    fontFamily: "Inter, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "clamp(1rem, 1.25vw, 1.15rem)"
     fontWeight: 400
     lineHeight: 1.65
   label:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: ".95rem"
     fontWeight: 600
     lineHeight: 1
   button:
-    fontFamily: "Montserrat, system-ui, sans-serif"
+    fontFamily: "Roboto, system-ui, sans-serif"
     fontSize: "1.05rem"
     fontWeight: 700
     lineHeight: 1
@@ -216,6 +216,7 @@ A client-pinned palette shared with transportesnazar.cl: navy and slate for grou
 - **WhatsApp Green** (wa): third-party brand colour, restricted to WhatsApp affordances (icon in the outline button, its hover ring, the floating button, the mobile dock half).
 
 ### Neutral
+- **Paleta y letras de sotraser.cl (nov. 2026, pedido del cliente):** Roboto en todo el sitio; azul #09467A (brand, water-deep, ink, botones) con texto #334155; celeste #3B8FD4 y #9CC9EE solo como acento. Reemplaza la paleta Nazar descrita abajo.
 - **Page ground is white, as on transportesnazar.cl** (oct. 2026, client request): body, hero (photo washed with white), services, gallery, footer on Paper White; ticker, coverage, people and close on Mist Grey. Indigo (water-deep) stays as the only coloured band (figures, incendios). Navy no longer grounds any section.
 - **Dispatch Navy** (night) / Ink (ink): headings and strong text on light grounds; the split-flap board keeps its dark tiles as an object on white.
 - **Slate Raised** (night-2), **Indigo Night** (night-3): kept as tokens, unused as grounds.

@@ -228,51 +228,58 @@
   }, { rootMargin: '-20% 0px -20% 0px' });
   ['.hero', '.services', '.pool', '.close'].forEach(s => waIO.observe($(s)));
 
-  /* ---------- Mapa de Chile ---------- */
-  const CARGA = 'Transporte de carga a todo Chile. Para agua potable o maquinaria, consúltanos por tu sector.';
+  /* ---------- Mapa de Chile: 16 regiones agrupadas en 6 zonas ---------- */
   const regions = {
-    nuble: ['Región de Ñuble', 'Nuestra región base: San Carlos y toda Ñuble.'],
-    biobio: ['Región del Biobío', 'Distribución de agua y transporte en la Región del Biobío.'],
-    maule: ['Región del Maule', 'Servicio hacia el norte, en la Región del Maule.'],
-    araucania: ['Región de La Araucanía', 'Llegamos a algunas zonas de La Araucanía. Consúltanos por tu sector.'],
-    arica: ['Región de Arica y Parinacota'], tarapaca: ['Región de Tarapacá'], antofagasta: ['Región de Antofagasta'],
-    atacama: ['Región de Atacama'], coquimbo: ['Región de Coquimbo'], valparaiso: ['Región de Valparaíso'],
-    rm: ['Región Metropolitana'], ohiggins: ["Región de O'Higgins"], losrios: ['Región de Los Ríos'],
-    loslagos: ['Región de Los Lagos'], aysen: ['Región de Aysén'], magallanes: ['Región de Magallanes']
+    arica: 'Región de Arica y Parinacota', tarapaca: 'Región de Tarapacá', antofagasta: 'Región de Antofagasta',
+    atacama: 'Región de Atacama', coquimbo: 'Región de Coquimbo', valparaiso: 'Región de Valparaíso',
+    rm: 'Región Metropolitana', ohiggins: "Región de O'Higgins", maule: 'Región del Maule', nuble: 'Región de Ñuble',
+    biobio: 'Región del Biobío', araucania: 'Región de La Araucanía', losrios: 'Región de Los Ríos',
+    loslagos: 'Región de Los Lagos', aysen: 'Región de Aysén', magallanes: 'Región de Magallanes'
   };
+  const areas = {
+    norte: { r: ['arica', 'tarapaca', 'antofagasta'], nat: 'n', t: 'Norte Grande: Arica y Parinacota, Tarapacá y Antofagasta, por la Ruta 5 desde San Carlos.' },
+    nortechico: { r: ['atacama', 'coquimbo'], nat: 'n', t: 'Norte Chico: Atacama y Coquimbo.' },
+    centro: { r: ['valparaiso', 'rm', 'ohiggins', 'maule'], nat: 'n', t: "Zona Central: Valparaíso, Metropolitana, O'Higgins y Maule." },
+    centrosur: { r: ['nuble', 'biobio', 'araucania'], t: 'Centro Sur: nuestra base en San Carlos, Ñuble, con salida directa a Biobío y La Araucanía.' },
+    sur: { r: ['losrios', 'loslagos'], nat: 's', t: 'Zona Sur: Los Ríos y Los Lagos.' },
+    austral: { r: ['aysen', 'magallanes'], nat: 's', t: 'Zona Austral: Aysén y Magallanes.' }
+  };
+  const areaOf = id => Object.keys(areas).find(k => areas[k].r.includes(id));
   const tabs = $$('.regions [role="tab"]');
   const chmap = $('[data-chmap]');
   const zones = $$('[data-zone]', chmap);
   const labels = $$('[data-label]', chmap);
   const routes = $$('[data-route]', chmap);
+  const nats = $$('[data-nat]', chmap);
   const tip = $('[data-tip]', chmap);
   const note = $('[data-region-note]');
   let userPicked = false;
 
+  // id puede ser una zona (pestañas) o una región (clic en el mapa)
   const selectRegion = (id, focus = false) => {
+    const area = areas[id] ? id : areaOf(id);
+    const on = areas[id] ? areas[id].r : [id];
     tabs.forEach(t => {
-      const on = t.dataset.region === id;
-      t.setAttribute('aria-selected', on);
-      t.tabIndex = on ? 0 : -1;
-      if (on && focus) t.focus();
+      const sel = t.dataset.region === area;
+      t.setAttribute('aria-selected', sel);
+      t.tabIndex = sel ? 0 : -1;
+      if (sel && focus) t.focus();
     });
-    if (!tabs.some(t => t.dataset.region === id)) tabs[0].tabIndex = 0;
-    zones.forEach(z => z.classList.toggle('is-on', z.dataset.zone === id));
-    labels.forEach(l => l.classList.toggle('is-on', l.dataset.label === id));
-    routes.forEach(r => r.classList.toggle('is-on', r.dataset.route === id));
-    const [name, text = CARGA] = regions[id];
-    note.textContent = regions[id][1] ? text : `${name}: ${text}`;
+    zones.forEach(z => z.classList.toggle('is-on', on.includes(z.dataset.zone)));
+    labels.forEach(l => l.classList.toggle('is-on', on.includes(l.dataset.label)));
+    routes.forEach(r => r.classList.toggle('is-on', on.includes(r.dataset.route)));
+    nats.forEach(n => n.classList.toggle('is-on', n.dataset.nat === areas[area].nat));
+    note.textContent = areas[id] ? areas[id].t : `${regions[id]}: cobertura Aljibe con despacho desde San Carlos.`;
   };
 
   // clic en el mapa elige la región; al pasar el mouse se muestra su nombre
   zones.forEach(z => {
     z.addEventListener('click', () => { userPicked = true; selectRegion(z.dataset.zone); });
     z.addEventListener('pointermove', e => {
-      const [name, text] = regions[z.dataset.zone];
       const box = chmap.getBoundingClientRect();
       const b = document.createElement('b');
-      b.textContent = name;
-      tip.replaceChildren(b, text ? 'Cobertura directa' : 'Transporte de carga');
+      b.textContent = regions[z.dataset.zone];
+      tip.replaceChildren(b, z.dataset.zone === 'nuble' ? 'Base San Carlos · KM 370' : 'Cobertura Aljibe');
       tip.style.left = `${e.clientX - box.left}px`;
       tip.style.top = `${e.clientY - box.top}px`;
       tip.hidden = false;
@@ -289,10 +296,10 @@
       selectRegion(tabs[(i + d + tabs.length) % tabs.length].dataset.region, true);
     });
   });
-  selectRegion('nuble');
+  selectRegion('centrosur');
 
-  // recorre las regiones solo mientras el mapa está a la vista
-  let radarTimer = 0, radarIdx = 0;
+  // recorre las zonas solo mientras el mapa está a la vista
+  let radarTimer = 0, radarIdx = tabs.findIndex(t => t.dataset.region === 'centrosur');
   const radarIO = new IntersectionObserver(([en]) => {
     clearInterval(radarTimer);
     if (!en.isIntersecting || reduce) return;
