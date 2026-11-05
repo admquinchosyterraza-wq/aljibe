@@ -36,7 +36,12 @@ El código también tiene respaldo en GitHub (privado): github.com/admquinchosyt
 
 ## Pendiente
 
-- Fotos del personal (3 casillas "Foto pendiente" en "Nuestra gente").
+- Fotos del personal: hoy hay 3 fotos DE EJEMPLO (generadas con IA en Canva + logo agregado,
+  450 px, marcadas "Foto de ejemplo"). Reemplazar por las de la sesión de fotos real
+  (img/equipo-operador.webp, equipo-tecnica.webp, equipo-despacho.webp).
+- Cotizador de piscinas (#piscinas): el cálculo es referencial; el mensaje va al WhatsApp +56 9 8508 3990.
+- Mapa de Chile: datos de regiones de github.com/maxfindel/chile-map-geojson (OpenStreetMap).
+  Se regenera con un script de Python (no está en el repo); las coordenadas están dentro del SVG en index.html.
 - Fotos de servicios en mayor resolución (las actuales son de 500 px).
 - Confirmar que se puede mostrar la razón social del certificado Giro Limpio.
 - Al aprobar: conectar aljibe.cl y www.aljibe.cl en Cloudflare (Settings → Domains & Routes),

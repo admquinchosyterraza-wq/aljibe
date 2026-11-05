@@ -226,17 +226,26 @@
     entries.forEach(en => en.isIntersecting ? covering.add(en.target) : covering.delete(en.target));
     waFloat.classList.toggle('is-hidden', covering.size > 0);
   }, { rootMargin: '-20% 0px -20% 0px' });
-  ['.hero', '.services', '.close'].forEach(s => waIO.observe($(s)));
+  ['.hero', '.services', '.pool', '.close'].forEach(s => waIO.observe($(s)));
 
-  /* ---------- Radar de cobertura ---------- */
-  const notes = {
-    nuble: 'Nuestra región base: San Carlos y toda Ñuble.',
-    biobio: 'Distribución de agua y transporte en la Región del Biobío.',
-    maule: 'Servicio hacia el norte, en la Región del Maule.',
-    araucania: 'Llegamos a algunas zonas de La Araucanía. Consúltanos por tu sector.'
+  /* ---------- Mapa de Chile ---------- */
+  const CARGA = 'Transporte de carga a todo Chile. Para agua potable o maquinaria, consúltanos por tu sector.';
+  const regions = {
+    nuble: ['Región de Ñuble', 'Nuestra región base: San Carlos y toda Ñuble.'],
+    biobio: ['Región del Biobío', 'Distribución de agua y transporte en la Región del Biobío.'],
+    maule: ['Región del Maule', 'Servicio hacia el norte, en la Región del Maule.'],
+    araucania: ['Región de La Araucanía', 'Llegamos a algunas zonas de La Araucanía. Consúltanos por tu sector.'],
+    arica: ['Región de Arica y Parinacota'], tarapaca: ['Región de Tarapacá'], antofagasta: ['Región de Antofagasta'],
+    atacama: ['Región de Atacama'], coquimbo: ['Región de Coquimbo'], valparaiso: ['Región de Valparaíso'],
+    rm: ['Región Metropolitana'], ohiggins: ["Región de O'Higgins"], losrios: ['Región de Los Ríos'],
+    loslagos: ['Región de Los Lagos'], aysen: ['Región de Aysén'], magallanes: ['Región de Magallanes']
   };
   const tabs = $$('.regions [role="tab"]');
-  const zones = $$('.radar .zone');
+  const chmap = $('[data-chmap]');
+  const zones = $$('[data-zone]', chmap);
+  const labels = $$('[data-label]', chmap);
+  const routes = $$('[data-route]', chmap);
+  const tip = $('[data-tip]', chmap);
   const note = $('[data-region-note]');
   let userPicked = false;
 
@@ -247,12 +256,29 @@
       t.tabIndex = on ? 0 : -1;
       if (on && focus) t.focus();
     });
-    zones.forEach(z => {
-      z.classList.toggle('is-on', z.dataset.zone === id);
-      z.classList.toggle('is-dim', z.dataset.zone !== id);
-    });
-    note.textContent = notes[id];
+    if (!tabs.some(t => t.dataset.region === id)) tabs[0].tabIndex = 0;
+    zones.forEach(z => z.classList.toggle('is-on', z.dataset.zone === id));
+    labels.forEach(l => l.classList.toggle('is-on', l.dataset.label === id));
+    routes.forEach(r => r.classList.toggle('is-on', r.dataset.route === id));
+    const [name, text = CARGA] = regions[id];
+    note.textContent = regions[id][1] ? text : `${name}: ${text}`;
   };
+
+  // clic en el mapa elige la región; al pasar el mouse se muestra su nombre
+  zones.forEach(z => {
+    z.addEventListener('click', () => { userPicked = true; selectRegion(z.dataset.zone); });
+    z.addEventListener('pointermove', e => {
+      const [name, text] = regions[z.dataset.zone];
+      const box = chmap.getBoundingClientRect();
+      const b = document.createElement('b');
+      b.textContent = name;
+      tip.replaceChildren(b, text ? 'Cobertura directa' : 'Transporte de carga');
+      tip.style.left = `${e.clientX - box.left}px`;
+      tip.style.top = `${e.clientY - box.top}px`;
+      tip.hidden = false;
+    });
+    z.addEventListener('pointerleave', () => { tip.hidden = true; });
+  });
   tabs.forEach((t, i) => {
     t.addEventListener('click', () => { userPicked = true; selectRegion(t.dataset.region); });
     t.addEventListener('keydown', e => {
@@ -265,7 +291,7 @@
   });
   selectRegion('nuble');
 
-  // recorre las regiones solo mientras el radar está a la vista
+  // recorre las regiones solo mientras el mapa está a la vista
   let radarTimer = 0, radarIdx = 0;
   const radarIO = new IntersectionObserver(([en]) => {
     clearInterval(radarTimer);
@@ -276,10 +302,83 @@
       selectRegion(tabs[radarIdx].dataset.region);
     }, 3200);
   }, { threshold: .4 });
-  radarIO.observe($('.radar'));
+  radarIO.observe(chmap);
+
+  /* ---------- Cotizador de llenado de piscinas ---------- */
+  const pool = $('[data-pool]');
+  const num = v => (Number.isFinite(v) ? v : NaN);
+  const dec = new Intl.NumberFormat('es-CL', { maximumFractionDigits: 1 });
+  const poolM3 = $('[data-pool-m3]');
+  let lastM3 = poolM3._text;
+
+  const readPool = () => {
+    const f = pool.elements;
+    const forma = f.forma.value;
+    const v = name => num(f[name].valueAsNumber);
+    let m3 = NaN, medidas = '', ancho = v('largo');
+    if (forma === 'rect') { m3 = v('largo') * v('ancho') * v('prof'); medidas = `Rectangular, ${dec.format(v('largo'))} × ${dec.format(v('ancho'))} m`; }
+    if (forma === 'ovalada') { m3 = Math.PI * v('largo') / 2 * v('ancho') / 2 * v('prof'); medidas = `Ovalada, ${dec.format(v('largo'))} × ${dec.format(v('ancho'))} m`; }
+    if (forma === 'redonda') { m3 = Math.PI * (v('diametro') / 2) ** 2 * v('prof'); medidas = `Redonda, ${dec.format(v('diametro'))} m de diámetro`; ancho = v('diametro'); }
+    if (forma === 'm3') { m3 = v('vol'); medidas = 'Volumen indicado por el cliente'; }
+    return { forma, m3, medidas, ancho, prof: v('prof') };
+  };
+
+  const updatePool = () => {
+    const { forma, m3, ancho, prof } = readPool();
+    $$('[data-show]', pool).forEach(el => { el.hidden = !el.dataset.show.split(' ').includes(forma); });
+    const ok = m3 > 0;
+    const shown = ok ? dec.format(Math.round(m3 * 10) / 10) : '—';
+    if (shown !== lastM3) { flapTo(poolM3, shown, { speed: 40 }); lastM3 = shown; }
+    $('[data-pool-l]').textContent = ok ? `${fmt.format(Math.round(m3 * 1000))} litros de agua potable` : 'Completa las medidas';
+    // dibujo: ancho según el largo (3 a 25 m) y nivel según la profundidad (hasta 3 m)
+    const w = forma === 'm3' ? 70 : 40 + 60 * Math.min(1, Math.max(0, (ancho - 3) / 22));
+    const h = forma === 'm3' ? 60 : 15 + 75 * Math.min(1, Math.max(0, prof / 3));
+    $('[data-pool-basin]').style.width = `${w || 40}%`;
+    $('[data-pool-water]').style.height = `${h || 15}%`;
+    $('[data-pool-w]').textContent = forma === 'm3' ? `${shown} m³` : `${dec.format(ancho || 0)} m`;
+    $('[data-pool-d]').textContent = forma === 'm3' ? 'Volumen' : `${dec.format(prof || 0)} m`;
+    $('[data-pool-d]').hidden = forma === 'm3';
+  };
+  pool.addEventListener('input', updatePool);
+  updatePool();
+
+  pool.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = pool.elements;
+    const { forma, m3, medidas, prof } = readPool();
+    const err = $('[data-pool-err]', pool);
+    const bad = [];
+    $$('[data-show]:not([hidden]) input', pool).forEach(i => {
+      const invalid = !(i.valueAsNumber > 0);
+      i.setAttribute('aria-invalid', invalid);
+      if (invalid) bad.push(i);
+    });
+    const comuna = f.comuna.value.trim();
+    f.comuna.setAttribute('aria-invalid', !comuna);
+    if (!comuna) bad.push(f.comuna);
+    if (bad.length || !(m3 > 0)) {
+      err.textContent = !comuna && bad.length === 1 ? 'Indícanos la comuna o sector donde está la piscina.' : 'Revisa las medidas y la comuna: hay campos sin completar.';
+      err.hidden = false;
+      bad[0]?.focus();
+      return;
+    }
+    err.hidden = true;
+    const fecha = f.fecha.value ? f.fecha.value.split('-').reverse().join('-') : 'A coordinar';
+    const lines = [
+      'Hola Aljibe, quiero cotizar *llenado de piscina*:',
+      `• Piscina: ${medidas}`,
+      forma === 'm3' ? null : `• Profundidad promedio: ${dec.format(prof)} m`,
+      `• Volumen estimado: ${dec.format(Math.round(m3 * 10) / 10)} m³ (${fmt.format(Math.round(m3 * 1000))} litros)`,
+      `• Tipo: ${f.tipo.value}`,
+      `• Comuna / sector: ${comuna}`,
+      `• Fecha deseada: ${fecha}`,
+      f.nombre.value.trim() ? `• Nombre: ${f.nombre.value.trim()}` : null
+    ].filter(Boolean);
+    window.open(`https://wa.me/56985083990?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+  });
 
   /* ---------- Revelado al hacer scroll ---------- */
-  const revealSel = ['.figures .fig', '.services__top', '.fire__copy', '.fire__media img', '.coverage__copy', '.radar',
+  const revealSel = ['.figures .fig', '.services__top', '.road__head', '.road__item', '.pool__copy', '.pool__viz', '.fire__copy', '.fire__media img', '.coverage__copy', '.chmap',
     '.company__media', '.company__copy', '.people__head', '.person', '.green__copy', '.green__cert', '.close__title', '.close__cta'];
   const revealIO = new IntersectionObserver(entries => {
     entries.forEach(en => {
