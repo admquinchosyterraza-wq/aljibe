@@ -377,8 +377,24 @@
     window.open(`https://wa.me/56985083990?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
   });
 
+  /* ---------- Propuesta de valor: abre un ítem a la vez ---------- */
+  const vcards = $$('[data-value] .vcard');
+  vcards.forEach(btn => btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    vcards.forEach(b => {
+      const on = open && b === btn;
+      b.setAttribute('aria-expanded', on);
+      $('#' + b.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (open) {
+      const panel = $('#' + btn.getAttribute('aria-controls'));
+      const r = panel.getBoundingClientRect();
+      if (r.bottom > innerHeight) panel.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+    }
+  }));
+
   /* ---------- Revelado al hacer scroll ---------- */
-  const revealSel = ['.figures .fig', '.services__top', '.road__head', '.road__item', '.pool__copy', '.pool__viz', '.fire__copy', '.fire__media img', '.coverage__copy', '.chmap',
+  const revealSel = ['.figures .fig', '.value__head', '.vcard', '.services__top', '.road__head', '.road__item', '.pool__copy', '.pool__viz', '.fire__copy', '.fire__media img', '.coverage__copy', '.chmap',
     '.company__media', '.company__copy', '.people__head', '.person', '.green__copy', '.green__cert', '.close__title', '.close__cta'];
   const revealIO = new IntersectionObserver(entries => {
     entries.forEach(en => {

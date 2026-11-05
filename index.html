@@ -44,6 +44,10 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
     <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3.3.4 1.4 1.5 2.8 2.5 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="6.5" cy="17.5" r="2" fill="var(--white, #fff)" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17.5" r="2" fill="var(--white, #fff)" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
   </svg>
 
@@ -145,6 +149,76 @@
         <div class="fig"><span class="fig__num"><span data-count="40000">40.000</span><em>L</em></span><span class="fig__lbl">capacidad máxima por equipo</span></div>
         <div class="fig"><span class="fig__num">24/7</span><span class="fig__lbl">despacho y soporte logístico</span></div>
         <div class="fig"><span class="fig__num" data-count="4">4</span><span class="fig__lbl">regiones atendidas</span></div>
+      </div>
+    </section>
+
+    <!-- Propuesta de valor: 4 razones que se despliegan -->
+    <section class="value" aria-labelledby="value-title">
+      <div class="value__in">
+        <div class="value__head">
+          <p class="eyebrow">Por qué Aljibe</p>
+          <h2 id="value-title" class="h2 h2--ink">Cuando falta el agua, no hay tiempo que perder</h2>
+        </div>
+        <div class="value__grid" data-value>
+          <button class="vcard" type="button" aria-expanded="false" aria-controls="vp-1" id="vb-1">
+            <span class="vcard__n">01</span>
+            <svg class="vcard__ico" aria-hidden="true"><use href="#i-clock"/></svg>
+            <span class="vcard__t">Respuesta 24/7</span>
+            <span class="vcard__s">Despacho todos los días, a toda hora.</span>
+            <span class="vcard__more">Ver más <svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+          </button>
+          <button class="vcard" type="button" aria-expanded="false" aria-controls="vp-2" id="vb-2">
+            <span class="vcard__n">02</span>
+            <svg class="vcard__ico" aria-hidden="true"><use href="#i-shield"/></svg>
+            <span class="vcard__t">Agua certificada DS41</span>
+            <span class="vcard__s">Apta para consumo humano.</span>
+            <span class="vcard__more">Ver más <svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+          </button>
+          <button class="vcard" type="button" aria-expanded="false" aria-controls="vp-3" id="vb-3">
+            <span class="vcard__n">03</span>
+            <svg class="vcard__ico" aria-hidden="true"><use href="#i-truck"/></svg>
+            <span class="vcard__t">Flota propia y respaldo</span>
+            <span class="vcard__s">Aljibes de 1.000 a 40.000 litros.</span>
+            <span class="vcard__more">Ver más <svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+          </button>
+          <button class="vcard" type="button" aria-expanded="false" aria-controls="vp-4" id="vb-4">
+            <span class="vcard__n">04</span>
+            <svg class="vcard__ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span class="vcard__t">Experiencia en 4 regiones</span>
+            <span class="vcard__s">En el sur de Chile desde 2013.</span>
+            <span class="vcard__more">Ver más <svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+          </button>
+        </div>
+        <div class="vpanels">
+          <div class="vpanel" id="vp-1" role="region" aria-labelledby="vb-1" hidden>
+            <div class="vpanel__in">
+              <h3>Una central de despacho que no se apaga</h3>
+              <p>Atendemos llamadas y WhatsApp las 24 horas, los 365 días del año. Ante un corte de agua, un incendio o una faena detenida, coordinamos el equipo disponible y salimos lo antes posible, con soporte técnico y logístico durante todo el servicio.</p>
+              <a class="btn btn--call" href="tel:+56985083990"><svg aria-hidden="true"><use href="#i-phone"/></svg><span>Llamar ahora<small>+56 9 8508 3990</small></span></a>
+            </div>
+          </div>
+          <div class="vpanel" id="vp-2" role="region" aria-labelledby="vb-2" hidden>
+            <div class="vpanel__in">
+              <h3>Agua potable con respaldo sanitario</h3>
+              <p>Transportamos agua para consumo humano en estanques de acero inoxidable que cumplen la normativa DS41 del Ministerio de Salud. Abastecemos casas, condominios, piscinas, instituciones públicas y faenas con la misma exigencia.</p>
+              <a class="svc__cta" href="#servicios">Ver servicios <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+          <div class="vpanel" id="vp-3" role="region" aria-labelledby="vb-3" hidden>
+            <div class="vpanel__in">
+              <h3>Equipos propios para que el servicio no se detenga</h3>
+              <p>Contamos con aljibes de 1.000 a 40.000 litros, camiones planos y tolva, excavadora, retroexcavadora, motoniveladora y minicargador. Tenemos vehículos de reemplazo y personal calificado, así que una falla no deja a nadie sin agua.</p>
+              <a class="svc__cta" href="#servicios">Conocer la flota <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+          <div class="vpanel" id="vp-4" role="region" aria-labelledby="vb-4" hidden>
+            <div class="vpanel__in">
+              <h3>Conocemos los caminos de la zona</h3>
+              <p>Desde 2013 operamos desde el KM 370 de la Ruta 5 Sur, en San Carlos. Atendemos Ñuble, Biobío, Maule y zonas de La Araucanía, a instituciones públicas y privadas, con rutas de distribución pensadas para llegar a tiempo.</p>
+              <a class="svc__cta" href="#cobertura">Ver cobertura <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
